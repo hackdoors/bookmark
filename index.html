@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe嵌入网页时，页面大小怎么自适应</title>
+</head>
+<style>
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+    }
+
+    body {
+        background-color: rgb(228, 228, 228);
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .iframediv {
+        width: 62.80%;
+        height: 62.80%;
+        margin: 100px auto;
+        border: 10px dashed rgb(58, 58, 58);
+        overflow: hidden;
+    }
+
+    .iframediv iframe {
+        width: 1920px;
+        height: 1080px;
+        top: 0;
+        left: 0;
+        transform-origin: top left;
+        transform: scale(0.5)
+    }
+</style>
+
+<body>
+    <div class="iframediv">
+        <iframe src="https://blue.y1ng.org/#_1" frameborder="0"></iframe>
+    </div>
+<div class="iframediv">
+<iframe src="https://fumik0.com/" frameborder="0"></iframe>
+</div>
+</body>
+</html>
